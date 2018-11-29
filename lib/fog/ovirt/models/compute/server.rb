@@ -32,6 +32,7 @@ module Fog
         attribute :ips
         attribute :ha
         attribute :ha_priority
+        attribute :keyboard_layout
         attribute :clone
         attribute :disks
 

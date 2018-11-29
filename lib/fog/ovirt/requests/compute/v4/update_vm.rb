@@ -31,6 +31,7 @@ module Fog
                                         else
                                           blank_template
                                         end
+            attrs[:display][:keyboard_layout] = attrs[:keyboard_layout] if attrs[:keyboard_layout].present? && attrs[:display].present?
             vm_service.update(attrs)
           end
           # rubocop:enable Metrics/AbcSize

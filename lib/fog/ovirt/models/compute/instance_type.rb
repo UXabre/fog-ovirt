@@ -15,6 +15,7 @@ module Fog
         attribute :ha
         attribute :ha_priority
         attribute :display
+        attribute :keyboard_layout
         attribute :usb
         attribute :migration_downtime
         attribute :type

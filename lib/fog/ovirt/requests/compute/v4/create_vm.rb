@@ -59,6 +59,7 @@ module Fog
             end
             attrs[:memory_policy] = OvirtSDK4::MemoryPolicy.new(:guaranteed => attrs[:memory]) if attrs[:memory].to_i < Fog::Compute::Ovirt::DISK_SIZE_TO_GB
             attrs[:high_availability] = OvirtSDK4::HighAvailability.new(:enabled => attrs[:ha] == "1") if attrs[:ha].present?
+            attrs[:display][:keyboard_layout] = attrs[:keyboard_layout] if attrs[:keyboard_layout].present? && attrs[:display].present?
 
             # TODO: handle cloning from template
             process_vm_opts(attrs)

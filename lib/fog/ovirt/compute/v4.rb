@@ -89,6 +89,7 @@ module Fog
               opts[:cores] = value.topology.nil? ? nil : value.topology.cores
               opts[:sockets] = value.topology.nil? ? nil : value.topology.sockets
             when OvirtSDK4::Display
+              opts[:keyboard_layout] = value.keyboard_layout
               subject = value.certificate.subject if value.certificate
               {
                 :type => value.type,
